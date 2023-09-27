@@ -1,0 +1,22 @@
+npm install cors
+
+
+const express = require('express');
+const cors = require('cors');
+
+const app = express();
+
+// Habilitar o CORS para todas as rotas
+app.use(cors());
+
+// Ou habilitar o CORS para origens específicas
+// app.use(cors({
+//   origin: 'http://suaorigem.com',
+// }));
+
+// Suas rotas e lógica de aplicativo aqui
+
+const porta = 3000;
+app.listen(porta, () => {
+  console.log(`Servidor Node.js está executando na porta ${porta}`);
+});
